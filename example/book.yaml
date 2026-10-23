@@ -1,0 +1,13 @@
+title: "Światło między stronami"
+author: "Przykładowa Autorka"
+language: pl
+description: "Krótka opowieść o uważnym czytaniu i drobnych odkryciach."
+cover: assets/cover.png
+basePath: /example-book/
+siteUrl: https://example.com
+chapters:
+  - chapters/002.md
+  - chapters/001.md
+output:
+  html: true
+  epub: true

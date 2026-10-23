@@ -1,0 +1,47 @@
+{
+  "name": "@your-scope/book-reader",
+  "version": "0.1.0",
+  "description": "Minimal static book publisher with EPUB 3 export",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "book-reader": "lib/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE",
+    "example/book.yaml",
+    "example/chapters",
+    "example/assets"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "example": "node lib/cli.js build example",
+    "prepack": "npm run build",
+    "test:browser": "npm run build && node --test test/browser.mjs",
+    "check:epub": "node scripts/check-epub.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "markdown-it": "^14.1.0",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.0.0",
+    "axe-core": "^4.14.0",
+    "playwright-core": "^1.64.1",
+    "typescript": "^5.9.0"
+  }
+}
