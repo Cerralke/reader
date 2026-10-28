@@ -22,7 +22,8 @@
     "LICENSE",
     "example/book.yaml",
     "example/chapters",
-    "example/assets"
+    "example/assets",
+    "static/fonts"
   ],
   "scripts": {
     "build": "tsc",
